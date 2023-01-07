@@ -74,4 +74,4 @@ $ ros2 launch unkothink unko_hello.py
 
 ## License
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-- © 2022 Aso Hidetoshi
+- © 2023 Aso Hidetoshi
