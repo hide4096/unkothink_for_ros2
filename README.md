@@ -42,7 +42,7 @@ $ ros2 launch unkothink unko_hello.py
 [listen_unko-2]
 ```
 
-- /unkothinkトピックにメッセージを直接送ることもできます
+- /unkothinkトピックにメッセージを直接送ってうんこを表示することもできます。
 
   ```
   $ ros2 topic pub --once /unkothink std_msgs/String "data: unchi"
