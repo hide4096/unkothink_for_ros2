@@ -12,12 +12,13 @@ def RptCr(length,chara):
     return space
 
 def showunko(whatthink,step=3):
+  output = '\r\n'
 
   showthink = whatthink.splitlines()
   maxlen = max([len(i) for i in showthink])
   frame = ' ' + RptCr(maxlen + 2,'-') + ''
 
-  print(frame)
+  output+=frame+'\r\n'
   cnt = 0
   for i in showthink:
       space = ''
@@ -33,17 +34,19 @@ def showunko(whatthink,step=3):
               l = '\\'
               r = '/'
 
-      print(l + ' ' + i + space + ' ' + r)
+      output+=l + ' ' + i + space + ' ' + r + '\r\n'
       cnt += 1
-  print(frame)
+  output+=frame+'\r\n'
 
-  print('  @')
-  print('    @')
+  output+='  @\r\n'
+  output+='    @\r\n'
 
   for i in range(step):
       if i == 0:
-          print(RptCr(step+1,' ') + '人')
-      print(RptCr(step-i,' ') + '(' + RptCr((i+1)*2,'_') + ')')
+          output+=RptCr(step+1,' ') + '人\r\n'
+      output+=RptCr(step-i,' ') + '(' + RptCr((i+1)*2,'_') + ')\r\n'
+
+  return output
 
 class ListenUnko(Node):
   def __init__(self):
@@ -51,7 +54,7 @@ class ListenUnko(Node):
     self.sub = self.create_subscription(String, "unkothink", self.dopoop, 10)
   
   def dopoop(self,msg):
-    showunko(msg.data)
+    self.get_logger().info(showunko(msg.data))
 
 def main():
   rclpy.init()

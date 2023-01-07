@@ -1,4 +1,6 @@
 from setuptools import setup
+from glob import glob
+import os
 
 package_name = 'unkothink'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share',package_name),glob('launch/*.py'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-          'talker = unkothink.talker:main',
+          'sayhello = unkothink.sayhello:main',
           'listen_unko = unkothink.listen_unko:main'
         ],
     },
