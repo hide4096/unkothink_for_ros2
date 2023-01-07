@@ -1,4 +1,4 @@
-# unkothink fot ros2
+# unkothink for ros2
 
 [![test unkothink](https://github.com/hide4096/unkothink_for_ros2/actions/workflows/test.yml/badge.svg)](https://github.com/hide4096/unkothink_for_ros2/actions/workflows/test.yml)
 
