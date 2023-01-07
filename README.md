@@ -2,7 +2,9 @@
 
 [![test unkothink](https://github.com/hide4096/unkothink_for_ros2/actions/workflows/test.yml/badge.svg)](https://github.com/hide4096/unkothink_for_ros2/actions/workflows/test.yml)
 
-課題1で製作した[unkothink](https://github.com/hide4096/robosys2022#unkothink)コマンドをros2に移植しました。
+う○こが考え事をしてるASCII画像を生成するcowsayライクな~~クソ~~パッケージです。
+
+課題1で製作した[unkothink](https://github.com/hide4096/robosys2022#unkothink)コマンドを移植しました。
 
 ## Requirement
 - ROS2 Humble
@@ -68,9 +70,10 @@ $ ros2 launch unkothink unko_hello.py
 ## Description
 ![rqt](https://user-images.githubusercontent.com/87698678/211152444-3c3d97b0-e95d-49c2-9eb4-7b6036b68dd8.png)
 - /sayhello
-  - "Hello!"というメッセージをString型で1秒おきに、/unkothinkへ送信します
+  - "Hello!"というメッセージをString型で1秒おきに、/unkothinkへ送信するノードです
 - /oshiri
-  - /unkothinkに来たメッセージを元に、うんこが考え事をしているアスキーアートをコンソールに出力します
+  - /unkothinkに来たメッセージを元に、うんこが考え事をしているアスキーアートをコンソールに出力するノードです
+  - unkothinkの要
 
 ## License
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
