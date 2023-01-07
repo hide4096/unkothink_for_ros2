@@ -13,13 +13,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='hide',
+    maintainer='Aso Hidetoshi',
     maintainer_email='asouhide2002@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='unkothink for ros2',
+    license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+          'talker = unkothink.talker:main',
+          'listen_unko = unkothink.listen_unko:main'
         ],
     },
 )
