@@ -68,7 +68,7 @@ $ ros2 launch unkothink unko_hello.py
 ## Description
 ![rqt](https://user-images.githubusercontent.com/87698678/211152444-3c3d97b0-e95d-49c2-9eb4-7b6036b68dd8.png)
 - /sayhello
-  - "Hello!"というメッセージをString型で1秒おきに送信します
+  - "Hello!"というメッセージをString型で1秒おきに、/unkothinkへ送信します
 - /oshiri
   - /unkothinkに来たメッセージを元に、うんこが考え事をしているアスキーアートをコンソールに出力します
 
